@@ -1,0 +1,34 @@
+cluster:
+  active_shards_percent:
+    warning: 90
+    critical: 70
+  unassigned_shards:
+    critical: 0
+  relocating_shards:
+    warning: 0
+    critical: 50
+  pending_tasks:
+    warning: 100
+
+node:
+  heap_used_percent:
+    warning: 75
+    critical: 85
+  cpu_percent:
+    warning: 70
+    critical: 90
+  disk_used_percent:
+    warning: 80
+    critical: 90
+
+index:
+  large_index_gb:
+    warning: 100
+  red_indices:
+    critical: 0
+  yellow_indices:
+    warning: 0
+  field_count:
+    warning: 1000
+  nesting_depth:
+    warning: 20

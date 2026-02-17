@@ -1,0 +1,86 @@
+high_heap_usage:
+  message: JVM heap usage exceeds threshold
+  recommendations:
+    - Increase heap size: -Xmx parameter
+    - Check for memory leaks via heap dump analysis
+    - Reduce concurrent queries or indexing load
+    - Review field data cache size
+    - Check circuit breaker rejections
+
+cluster_status:
+  message: Cluster is not healthy
+  recommendations:
+    - Check unassigned shards and node failures
+    - Ensure all nodes are healthy and running
+    - Review cluster state
+
+unassigned_shards:
+  message: Unassigned shards detected
+  recommendations:
+    - Use allocation explain API to determine cause
+    - Check disk space on all nodes
+    - Verify node capacity and health
+    - Review shard allocation settings
+
+thread_pool_rejections:
+  message: Thread pool rejections detected
+  recommendations:
+    - Increase thread pool sizes
+    - Reduce concurrent operations
+    - Check for resource saturation
+    - Review JVM heap settings
+
+circuit_breakers:
+  message: Circuit breakers tripped
+  recommendations:
+    - Reduce request size
+    - Increase circuit breaker limits
+    - Check for memory leaks
+    - Review field data and caching
+
+red_indices:
+  message: Red indices detected
+  recommendations:
+    - Investigate shard allocation issues
+    - Check node health and disk space
+    - Review index configuration
+    - Check for failed shard recovery
+
+yellow_indices:
+  message: Yellow indices detected
+  recommendations:
+    - Check for replica shard allocation issues
+    - Review shard placement
+    - Verify node availability
+
+large_indices:
+  message: Large indices detected
+  recommendations:
+    - Consider index lifecycle management
+    - Use rollover for time-series data
+    - Review shard count
+    - Implement hot/warm/cold architecture
+
+too_many_fields:
+  message: Too many fields detected
+  recommendations:
+    - Review field mapping strategy
+    - Use nested documents or separate indices
+    - Disable dynamic mapping when possible
+    - Review field data types
+
+slow_queries:
+  message: Slow queries detected
+  recommendations:
+    - Optimize queries and add indices
+    - Review query patterns
+    - Use query profiling tools
+    - Check for missing indices
+
+high_rejection_rate:
+  message: High rejection rate detected
+  recommendations:
+    - Check thread pool sizes and load
+    - Increase heap or adjust thread pool settings
+    - Review concurrent operations
+    - Check for resource saturation
